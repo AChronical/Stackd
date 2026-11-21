@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="Stackd/Stackd.csproj" />
+  <Project Path="Stackd.Entities/Stackd.Entities.csproj" Id="f5f2ada2-ef64-4d35-8d3d-863a92941338" />
+  <Project Path="Stackd.Operations.csproj" />
+  <Project Path="Stackd.Services/Stackd.Services.csproj" Id="32d6c9f8-b8b5-40f2-b471-fc56f5873b82" />
 </Solution>
