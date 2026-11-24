@@ -1,0 +1,31 @@
+﻿@model Stackd.Entities.Ticket
+@{
+    //Anica Janjic 991799177
+    //Form to submit new ticket
+}
+<h1>Add a New Ticket</h1>
+@using (Html.BeginForm("AddTicket", "Stackd"))
+{
+    @Html.Label("Enter Title: ")
+    @Html.TextBoxFor(t => t.Title)
+    @Html.ValidationMessageFor(t => t.Title, "", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Enter Description: ")
+    @Html.TextAreaFor(t => t.Description)
+    @Html.ValidationMessageFor(t => t.Description, "", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Enter Submission Date: ")
+    @Html.TextBoxFor(t => t.DateSubmitted, "{0:yyyy-MM-ddTHH:mm}", new { type = "datetime-local" })
+    @Html.ValidationMessageFor(t => t.DateSubmitted, "", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Enter Ticket Type: ")
+    @Html.TextBoxFor(t => t.Type)
+    @Html.ValidationMessageFor(t => t.Type, "", new { @class = "text-danger" })
+    <br />
+
+    <input type="submit" value="Add New Ticket" />
+}
+<br /> 

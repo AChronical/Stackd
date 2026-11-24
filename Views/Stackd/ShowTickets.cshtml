@@ -1,0 +1,32 @@
+﻿@{
+    //Anica Janjic 991799177
+    //This is used to display all the submitted tickets
+}
+<h1>Show All Tickets</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Ticket Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Ticket Type</th>
+            <th>Date Submitted</th>
+            <th>Status</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.TicketId</td>
+                <td>@t.Title</td>
+                <td>@t.Description</td>
+                <td>@t.TicketType</td>
+                <td>@t.DateSubmitted</td>
+                <td>@t.Status</td>
+                <td>@t.User?.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
