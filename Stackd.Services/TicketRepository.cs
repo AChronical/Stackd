@@ -26,7 +26,7 @@ namespace Stackd.Services
             return _context.Tickets.Include(t => t.User).ToList();
         }
 
-        //adds the new ticket to the database and then displays it
+        //adds the new ticket to the database 
         public Ticket AddTicket(Ticket ticket)
         {
             ticket.Status = "Open";

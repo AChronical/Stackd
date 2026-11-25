@@ -1,0 +1,27 @@
+﻿@model Stackd.Entities.User
+
+@{
+    //Anica Janjic 991799177
+    //form to register new user
+}
+<h1>Register User</h1>
+@using (Html.BeginForm("Register", "Stackd")
+{
+    @Html.Label("Enter name: ")
+    @Html.TextBoxFor(u => u.Name)
+    @Html.ValidationMessageFor(u => u.Name, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Enter email: ")
+    @Html.TextBoxFor(u => u.Email)
+    @Html.ValidationMessageFor(u => u.Email, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Enter phone number: ")
+    @Html.TextBoxFor(u => u.PhoneNumber)
+    @Html.ValidationMessageFor(u => u.PhoneNumber, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Enter password: ")
+    @Html.TextBoxFor(u => u.Password)
+    @Html.ValidationMessageFor(u => u.Password, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" value="Register" />
+}

@@ -1,0 +1,28 @@
+﻿@model Stackd.Entities.User
+
+@{
+    //Anica Janjic 991799177
+    //this is used to allow the user to update their profile if needed
+}
+<h1>Update Profile Information</h1>
+@using (Html.BeginForm("Update", "Stackd"))
+{
+
+    @Html.Label("Enter name: ")
+    @Html.TextBoxFor(u => u.UserName)
+    @Html.ValidationMessageFor(u => u.UserName, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Enter email: ")
+    @Html.TextBoxFor(u => u.Email)
+    @Html.ValidationMessageFor(u => u.Email, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Enter phone number: ")
+    @Html.TextBoxFor(u => u.PhoneNumber)
+    @Html.ValidationMessageFor(u => u.PhoneNumber, "", new { @class = "text-danger" })
+    <br />
+    @Html.Label("Enter password: ")
+    @Html.TextBoxFor(u => u.Password)
+    @Html.ValidationMessageFor(u => u.Password, "", new { @class = "text-danger" })
+    <br />
+    <input type="submit" value="Update Profile" />
+}

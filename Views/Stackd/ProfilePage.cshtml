@@ -1,0 +1,29 @@
+﻿@model Stackd.Entities.User
+
+@{
+    //Anica Janjic 991799177
+    //this is used to display the users profile page
+}
+<h1>User Profile</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.UserId</td>
+            <td>@Model.UserName</td>
+            <td>@Model.Email</td>
+            <td>@Model.PhoneNumber</td>
+            <td>
+                @Html.ActionLink("Update", "Update", "Stackd", null, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+    </tbody>
+</table>

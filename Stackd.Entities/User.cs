@@ -13,22 +13,22 @@ namespace Stackd.Entities
         [StringLength(20, ErrorMessage = "Users name cannot exceed 20 characters.")]
         [RegularExpression(@"^[^0-9]*$", ErrorMessage = "Users name must not include any digits.")]
         [DataType(DataType.Text)]
-        public string? Name { get; set; }
+        public string UserName { get; set; }
 
         [Required(ErrorMessage = "Email is required.")]
         [EmailAddress(ErrorMessage = "Invalid email address format.")]
         [StringLength(100, ErrorMessage = "Email cannot exceed 100 characters.")]
         [DataType(DataType.EmailAddress)]
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required.")]
         [StringLength(50, ErrorMessage = "Password cannot exceed 50 characters.")]
         [DataType(DataType.Password)]
-        public string? Password { get; set; }
+        public string Password { get; set; }
 
         [Required(ErrorMessage = "Phone number is required.")]
         [RegularExpression(@"^\d{3}-\d{3}-\d{4}$", ErrorMessage = "Phone number must follow the format '123-456-7890'.")]
         [DataType(DataType.PhoneNumber)]
-        public string? PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }
